@@ -1,5 +1,21 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}"/>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-inverse navbar-static-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="{%url 'music:index' %}"> MywebApp</a>
+		</div>
+	</div>
+
+</nav>
 <ul>
 {% for album in all_albums %}
-<li><a href="/music/{{album.id}}">{{album.album_title}}</a></li>
+<li><a href="{% url 'music:detail' album.id %}">{{album.album_title}}</a></li>
 {% endfor %}
 </ul>
