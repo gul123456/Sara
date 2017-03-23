@@ -1,3 +1,59 @@
 body{
 	background-color: #eceff5;
 }
+.navbar-default{
+	background-color: #fff;
+}
+.navbar{
+	min-height: 70px;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #2f7a66;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color:#36a588;
+}
+.btn-search{
+	color:#fff;
+	background-color: #1d363d;
+	
+}
+.btn-search:hover{
+	color: #fff;
+}
+.container-fluid{
+	padding-top: 5px;
+	padding-left: 15px;
+}
+.navbar-default .navbar-brand{
+	font-family: 'Baloo Bhaina', cursive;
+	font-size: 30px;
+	padding: 20px 20px;
+	color:#261a51;
+}
+
+blockquote .small, blockquote footer, blockquote small {
+    display: block;
+    font-size: 70%;
+   word-break: break-word;
+}
+.btn-view{
+	background-color: #33b77c;
+	color:white;
+	border-color: #fff;
+}
+.btn-view:hover{
+	background-color: #29c476;
+	color:white;
+	border-color: #fff;
+}
+h2.title{
+	font-family: 'Lobster', cursive;
+}
+#search{
+    display:block;
+    text-align:center;
+}
+.btn-lg{
+	padding: 9px 12px;
+}
