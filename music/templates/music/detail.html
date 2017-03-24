@@ -1,19 +1,11 @@
-<img src="{{album.album_logo}}">
+{%extends 'music/base.html'%}
+{%block title %}Sara|Album Details{%endblock%}
+{% block body %}
+<div class="container">
+<div class="row">
+ <img src="{{album.album_logo}}" width="300px" height="320px" class="img-responsive">
 
-<h1>{{album.artist}}</h1>
-{% if error_message %}
-	<p><strong>{{error_message}}</strong></p>
-{% endif %}
-
-<form action="{% url 'music:favorite' album.id %}" method="post">
-{% csrf_token%}
-{% for song in album.song_set.all %}
-<input type="radio" id="song{{forloop.counter}}" value="{{song.id}}" name="song" />
-<label for="song{{forloop.counter}}">{{song.song_title}}
-	{% if song.is_favorite %}
-		<img src="https://maxcdn.icons8.com/windows8/PNG/26/Messaging/star-26.png" title="Star" width="26">
-	{% endif %}
-</label><br/>
-{% endfor %}
-<input type="submit" value="favorite"/>
-</form>
+<h1><small><cite>{{album.artist}}</cite></small></h1>
+</div>
+</div>
+{% endblock %}
